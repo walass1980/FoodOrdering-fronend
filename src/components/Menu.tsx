@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import Carticon from './Carticon'
 
 const links =[
     {id:1, title: "Homepage", url:"/"},
@@ -26,7 +27,7 @@ const Menu = () => {
     ):(
     <Link href="/orders">Orders</Link>
     )}
-    <Link href="/cart">Cart</Link>
+    <Carticon/>
     </div>  
     </div>
   )
