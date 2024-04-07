@@ -9,6 +9,8 @@ const links =[
     {id:1, title: "Workink Hours", url:"/"},
     {id:1, title: "Contact", url:"/"},
 ]
+//TEMPORARY
+const user=false
 const Menu = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -16,11 +18,16 @@ const Menu = () => {
         {!open? (<Image src="/open.png" alt='' width={20} height={20} onClick={()=>setOpen(true)}/>)
         :(<Image src="/close.png" alt='' width={20} height={20} onClick={()=>setOpen(false)}/>
         )}
-      <div className='bg-red-500 text-white absolute left-0 top-24 w-full h-[calc(100vh-6rem)] flex flex-col items-center justify-center text-xl gap-8'>
+      <div className='bg-red-500 text-white absolute left-0 top-24 w-full h-[calc(100vh-6rem)] flex flex-col gap-8 items-center justify-center text-xl z-10'>
      {links.map((item)=>(
         <Link href={item.url} key={item.id}>{item.title}</Link>
      ))}
-      </div>  
+    {!user?(<Link href="/login">Login</Link>
+    ):(
+    <Link href="/orders">Orders</Link>
+    )}
+    <Link href="/cart">Cart</Link>
+    </div>  
     </div>
   )
 }
