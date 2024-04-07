@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import Menu from './Menu'
 import Carticon from './Carticon'
+import Image from 'next/image'
 
 const Navbar = () => {
   const user = false
@@ -22,10 +23,15 @@ const Navbar = () => {
           <Menu/>   
       </div>
       {/*RIGHT MENU*/}
-      <div className='hidden md:flex gap-4'>
+     <div className='hidden md:flex gap-4 items-center'>
+      <div className='flex items-center gap-2 cursor-pointer'>
+        <Image src="/phone.png" alt="" width={20} height={20}/>
+        <span>123 456 78</span>
+      </div>
         {
-        !user? (<Link href="/">Login</Link>):(
-        <Link href="/orders">Orders</Link>)}
+        !user? (<Link href="/login">Login</Link>):(
+        <Link href="/orders">Orders</Link>)
+        }
         <Carticon/>
       </div>
     </div>
