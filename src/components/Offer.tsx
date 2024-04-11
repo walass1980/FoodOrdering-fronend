@@ -6,8 +6,9 @@ const Offer = () => {
     <div className='bg-black h-screen flex flex-col md:flex-row'>
       {/*TEXT CONTAINER*/}
       <div className='flex-1'>
-       <h1 className=''></h1>
-       <p className=''></p>
+       <h1 className='text-white'>Delicious Burger & French Fry</h1>
+       <p className='text-white'>Progressively simplify effective e-toilers and process-centric methods
+          of empowerment. Quickly pontificate parallel.</p>
        <button className=''>Order Now</button>
       </div>
       {/*IMAGE CONTAINER*/}
