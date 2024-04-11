@@ -7,16 +7,18 @@ const CategoryPage = () => {
   return (
     <div className='flex flex-wrap text-red-500'>
       {pizzas.map(item=>(
-        <Link className='w-full h-[60vh] border-r-2 border-b-2 border-red-500 sm:w-1/2 lg:w-1/3' href={`/product/${item.id}`} key={item.id}>
+        <Link className='flex flex-col justify-between group w-full h-[60vh] p-4 border-r-2 border-b-2 border-red-500 sm:w-1/2 lg:w-1/3' href={`/product/${item.id}`} key={item.id}>
          {/*IMAGE CONTAINER*/}
          {item.img && (
-         <div className='relative'>
-         <Image src={item.img} alt='' fill/>
+         <div className='relative h-[80%]'>
+         <Image src={item.img} alt='' fill className='object-contain'/>
          </div>
         )}
          {/*TEXT CONTAINER*/}
-         <div className=''>
-
+         <div className='flex items-center justify-between font-bold'>
+        <h1 className='text-2xl uppercase p-2'>{item.title}</h1>
+        <h2>${item.price}</h2>
+        <button className='bg-red-500 hidden group-hover:block uppercase text-white p-2 rounded-md'>Add to Cart</button>
          </div>
         </Link>
       ))}
