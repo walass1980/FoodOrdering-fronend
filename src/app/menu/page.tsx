@@ -14,7 +14,7 @@ const MenuPage= () => {
         <div className={`text-${category.color} w-1/2`}>
           <h1 className='uppercase font-bold text-3xl'>{category.title}</h1>
           <p className='text-sm py-8'>{category.desc}</p>
-          <button className={`hidden 2xl:block bg-${category.color} py-2 px-4 rounded-md text-${category.color==="black" ? "white" : "bg-red-500"}`}>Explore</button>
+          <button className={`hidden 2xl:block bg-${category.color} py-2 px-4 rounded-md text-${category.color === "black" ? "white" : "red-500"}`}>Explore</button>
         </div>
      </Link>
     ))}
