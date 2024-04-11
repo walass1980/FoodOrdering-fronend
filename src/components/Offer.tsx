@@ -2,7 +2,16 @@ import React from 'react'
 
 const Offer = () => {
   return (
-    <div>Offer</div>
+    <div className=''>
+      {/*TEXT CONTAINER*/}
+      <div className=''>
+
+      </div>
+      {/*IMAGE CONTAINER*/}
+      <div className=''>
+        
+      </div>
+    </div>
   )
 }
 
