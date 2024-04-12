@@ -7,19 +7,19 @@ type Props = {
 }
 const Price = ({price,id,options}:Props) => {
   return (
-    <div>
-    <h2>${price.toFixed(2)}</h2>
+    <div className='flex flex-col gap-4'>
+    <h2 className='text-2xl font-bold'>${price.toFixed(2)}</h2>
     {/*OPTION CONTAINER*/}
-    <div className=''>
+    <div className='flex gap-4'>
      {options?.map(option=>(
-     <button className='' key={option.title}>{option.title}</button> 
+     <button className='ring-1 ring-red-400 rounded-md' key={option.title}>{option.title}</button> 
      ))}
     </div>
     {/*QUANTITY AND ADD BUTTON*/}
     <div className=''>
     {/*QUANTIYI*/}
      <span>Quantity</span>
-     <div>
+     <div className=''>
         <button>{'<'}</button>
         <span>1</span>
         <button>{'>'}</button>
